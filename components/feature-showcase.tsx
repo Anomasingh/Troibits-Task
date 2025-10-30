@@ -30,9 +30,9 @@ export default function FeatureShowcase({ currentFeature, setCurrentFeature }: F
   return (
     <div className="w-full h-full">
       {/* 3-Column Layout - Professional SaaS Style */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 lg:gap-16 items-center w-full h-full">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 lg:gap-10 items-center w-full h-full">
         {/* Left Column - Feature Content */}
-        <div className="order-1 md:order-1 flex flex-col justify-start space-y-2">
+        <div className="order-1 md:order-1 flex flex-col justify-start space-y-2 min-w-0">
           <AnimatePresence mode="wait">
             <motion.div
               key={currentFeature}

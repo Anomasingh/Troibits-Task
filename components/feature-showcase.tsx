@@ -29,10 +29,10 @@ export default function FeatureShowcase({ currentFeature, setCurrentFeature }: F
 
   return (
     <div className="w-full h-full">
-      {/* 3-Column Layout - Professional SaaS Style */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 lg:gap-10 items-center w-full h-full">
-        {/* Left Column - Feature Content */}
-        <div className="order-1 md:order-1 flex flex-col justify-start space-y-2 min-w-0">
+      {/* 3-Column Layout - Professional SaaS Style with responsive proportions */}
+      <div className="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8 items-center w-full h-full">
+        {/* Left Column - Feature Content (3 cols) */}
+        <div className="order-1 md:order-1 md:col-span-3 flex flex-col justify-start space-y-2">
           <AnimatePresence mode="wait">
             <motion.div
               key={currentFeature}
@@ -69,15 +69,15 @@ export default function FeatureShowcase({ currentFeature, setCurrentFeature }: F
           </div>
         </div>
 
-        {/* Center Column - iPhone Mockup */}
-        <div className="order-2 md:order-2 flex justify-center items-center py-8 md:py-0">
+        {/* Center Column - iPhone Mockup (6 cols - wider for larger display) */}
+        <div className="order-2 md:order-2 md:col-span-6 flex justify-center items-center py-8 md:py-0 w-full">
           <AnimatePresence mode="wait">
             <IPhoneMockup key={currentFeature} feature={feature} featureNumber={currentFeature + 1} />
           </AnimatePresence>
         </div>
 
-        {/* Right Column - Feature List */}
-        <div className="order-3 md:order-3 flex flex-col justify-start">
+        {/* Right Column - Feature List (3 cols) */}
+        <div className="order-3 md:order-3 md:col-span-3 flex flex-col justify-start">
           <FeatureList currentFeature={currentFeature} setCurrentFeature={setCurrentFeature} />
         </div>
       </div>

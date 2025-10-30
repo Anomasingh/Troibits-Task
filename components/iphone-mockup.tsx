@@ -1,6 +1,5 @@
 "use client"
 
-import { motion } from "framer-motion"
 import type { Feature } from "@/lib/features"
 import AppScreen from "./app-screen"
 
@@ -11,12 +10,7 @@ interface IPhoneMockupProps {
 
 export default function IPhoneMockup({ feature, featureNumber }: IPhoneMockupProps) {
   return (
-    <motion.div
-      className="relative w-full flex justify-center items-center"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.3, ease: "easeIn" }}
-    >
+    <div className="relative w-full flex justify-center items-center">
       {/* iPhone Frame - Premium design with enhanced proportions */}
       <div className="relative bg-black rounded-4xl overflow-hidden border-8 border-gray-950 shadow-2xl" style={{ maxHeight: "720px", aspectRatio: "9 / 19.5" }}>
         {/* Notch */}
@@ -25,18 +19,9 @@ export default function IPhoneMockup({ feature, featureNumber }: IPhoneMockupPro
         {/* Status Bar Background */}
         <div className="absolute top-0 left-0 right-0 h-8 bg-gradient-to-b from-gray-900 to-transparent z-10" />
 
-        {/* Screen Content with smooth transitions */}
+        {/* Screen Content - No animation wrapper */}
         <div className="relative w-full h-full overflow-hidden bg-white pt-8">
-          <motion.div
-            key={featureNumber}
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
-            transition={{ duration: 0.35, ease: "easeInOut" }}
-            className="w-full h-full"
-          >
-            <AppScreen feature={feature} featureNumber={featureNumber} />
-          </motion.div>
+          <AppScreen feature={feature} featureNumber={featureNumber} />
         </div>
 
         {/* Home Indicator */}
@@ -48,6 +33,6 @@ export default function IPhoneMockup({ feature, featureNumber }: IPhoneMockupPro
       
       {/* Ambient glow effect */}
       <div className="absolute inset-0 rounded-4xl -z-20 blur-3xl opacity-5 bg-gradient-to-br from-blue-600 to-purple-600" />
-    </motion.div>
+    </div>
   )
 }

@@ -1,48 +1,94 @@
-# Healthcare App Feature Showcase# Healthcare App Feature Showcase
+# Healthcare App Feature Showcase# Healthcare App Feature Showcase# Healthcare App Feature Showcase
 
 
 
-A smooth scroll-driven website that walks you through 5 app features using an interactive iPhone mockup. Built for the Troibits internship task.A smooth scroll-driven website that walks you through 5 app features using an interactive iPhone mockup. Built for the Troibits internship task.
+Scroll-driven website showcasing 5 app features with an interactive iPhone mockup.
 
 
 
-## What It Does### 🎯 Key Requirements Met
+## OverviewA smooth scroll-driven website that walks you through 5 app features using an interactive iPhone mockup. Built for the Troibits internship task.A smooth scroll-driven website that walks you through 5 app features using an interactive iPhone mockup. Built for the Troibits internship task.
 
 
 
-Scroll through the page and watch as 5 different healthcare app features come to life inside an iPhone. Each feature has its own custom UI that I designed - booking dashboards, AI insights, analytics graphs, payment tracking, and GST invoices.✅ **Section-Based Navigation**
+Three sections - intro, feature showcase (600vh), and outro. Scroll through features 1-5 before reaching the end section.
 
-- Section 1: Hero/Landing page
 
-The website has three sections:- Section 2: Interactive feature showcase (Features 1-5)
 
-1. **Intro page** - Landing section- Section 3: End/Call-to-action section
+## Features## What It Does### 🎯 Key Requirements Met
 
-2. **Feature showcase** - The main part where scrolling switches between 5 features (600vh tall, so each feature gets plenty of scroll time)
+
+
+1. Smart Booking - Appointments dashboard
+
+2. AI Suite - ML insights and predictions  
+
+3. Insights - Analytics with line graphsScroll through the page and watch as 5 different healthcare app features come to life inside an iPhone. Each feature has its own custom UI that I designed - booking dashboards, AI insights, analytics graphs, payment tracking, and GST invoices.✅ **Section-Based Navigation**
+
+4. Payments - Transaction history
+
+5. Billing - GST-compliant invoices- Section 1: Hero/Landing page
+
+
+
+## Tech StackThe website has three sections:- Section 2: Interactive feature showcase (Features 1-5)
+
+
+
+- Next.js 16 + React 191. **Intro page** - Landing section- Section 3: End/Call-to-action section
+
+- TypeScript
+
+- Tailwind CSS2. **Feature showcase** - The main part where scrolling switches between 5 features (600vh tall, so each feature gets plenty of scroll time)
+
+- Native scroll handling
 
 3. **Outro page** - Ending section✅ **Scroll Behavior**
 
+## Quick Start
+
 - Scroll through features without jumping to Section 3
 
-The cool part: You stay on the feature section until you've seen all 5 features. No accidental jumps to the end.- Each scroll cycles to next feature (Feature 1→2→3→4→5)
+```bash
 
-- Only after Feature 5, scrolling takes you to Section 3
+pnpm installThe cool part: You stay on the feature section until you've seen all 5 features. No accidental jumps to the end.- Each scroll cycles to next feature (Feature 1→2→3→4→5)
 
-## Tech Stack- Smooth, non-laggy behavior
+pnpm dev
+
+```- Only after Feature 5, scrolling takes you to Section 3
 
 
 
-- **Next.js 16** with React 19✅ **Interactive Features**
+Open http://localhost:3000## Tech Stack- Smooth, non-laggy behavior
 
-- **TypeScript** for type safety- Click any feature in the list to select it
 
-- **Tailwind CSS** for styling- Blue indicator shows active feature
+
+## How It Works
+
+
+
+Feature showcase section is 600vh tall:- **Next.js 16** with React 19✅ **Interactive Features**
+
+- 0-20%: Feature 1
+
+- 20-40%: Feature 2  - **TypeScript** for type safety- Click any feature in the list to select it
+
+- 40-60%: Feature 3
+
+- 60-80%: Feature 4- **Tailwind CSS** for styling- Blue indicator shows active feature
+
+- 80-100%: Feature 5
 
 - Native JavaScript for scroll handling (no GSAP)- Navigation arrows (previous/next)
 
+Section stays pinned until all features are viewed.
+
 - Real-time updates in all three columns
 
+---
+
 ## How to Run
+
+Troibits Internship Task • [GitHub](https://github.com/Anomasingh/Troibits-Task)
 
 ✅ **Responsive Design**
 

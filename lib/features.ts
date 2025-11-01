@@ -2,7 +2,8 @@ export interface Feature {
   id: number
   name: string
   title: string
-  points: string[]
+  heading: string
+  bullets: string[]
   image: string
 }
 
@@ -10,8 +11,9 @@ export const FEATURES: Feature[] = [
   {
     id: 1,
     name: "Smart Booking & Dashboard",
-    title: "Smart Booking & Dashboard",
-    points: [
+    title: "Feature 1",
+    heading: "Smart Booking & Dashboard",
+    bullets: [
       "Real-time booking management system",
       "Intuitive dashboard with analytics",
       "Automated scheduling and reminders",
@@ -22,8 +24,9 @@ export const FEATURES: Feature[] = [
   {
     id: 2,
     name: "AI-Powered App Suite",
-    title: "AI-Powered App Suite",
-    points: [
+    title: "Feature 2",
+    heading: "AI-Powered App Suite",
+    bullets: [
       "Machine learning-driven insights",
       "Predictive analytics for business decisions",
       "Automated workflow optimization",
@@ -34,8 +37,9 @@ export const FEATURES: Feature[] = [
   {
     id: 3,
     name: "Insights & Reports",
-    title: "Insights & Reports",
-    points: [
+    title: "Feature 3",
+    heading: "Insights & Reports",
+    bullets: [
       "Comprehensive data visualization",
       "Custom report generation",
       "Real-time performance metrics",
@@ -46,8 +50,9 @@ export const FEATURES: Feature[] = [
   {
     id: 4,
     name: "Payment Records & History",
-    title: "Payment Records & History",
-    points: [
+    title: "Feature 4",
+    heading: "Payment Records & History",
+    bullets: [
       "Secure transaction tracking",
       "Detailed payment history logs",
       "Multiple payment method support",
@@ -58,8 +63,9 @@ export const FEATURES: Feature[] = [
   {
     id: 5,
     name: "Billing & GST-Compliant Invoicing",
-    title: "Billing & GST-Compliant Invoicing",
-    points: [
+    title: "Feature 5",
+    heading: "Billing & GST-Compliant Invoicing",
+    bullets: [
       "Instant digital invoice generation",
       "GST-ready formats with automatic tax calculation",
       "Multiple payment modes supported",

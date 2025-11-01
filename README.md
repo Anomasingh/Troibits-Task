@@ -1,83 +1,159 @@
-# React Feature Showcase Website - Complete Implementation
+# Healthcare App Feature Showcase# Healthcare App Feature Showcase
 
-## 📖 Overview
 
-This is a **professional, fully responsive feature showcase website** built with modern web technologies. The website demonstrates a business app's key features through an interactive, scrollable interface with a mobile phone mockup.
 
-### 🎯 Key Requirements Met
+A smooth scroll-driven website that walks you through 5 app features using an interactive iPhone mockup. Built for the Troibits internship task.A smooth scroll-driven website that walks you through 5 app features using an interactive iPhone mockup. Built for the Troibits internship task.
 
-✅ **Section-Based Navigation**
+
+
+## What It Does### 🎯 Key Requirements Met
+
+
+
+Scroll through the page and watch as 5 different healthcare app features come to life inside an iPhone. Each feature has its own custom UI that I designed - booking dashboards, AI insights, analytics graphs, payment tracking, and GST invoices.✅ **Section-Based Navigation**
+
 - Section 1: Hero/Landing page
-- Section 2: Interactive feature showcase (Features 1-5)
-- Section 3: End/Call-to-action section
 
-✅ **Scroll Behavior**
+The website has three sections:- Section 2: Interactive feature showcase (Features 1-5)
+
+1. **Intro page** - Landing section- Section 3: End/Call-to-action section
+
+2. **Feature showcase** - The main part where scrolling switches between 5 features (600vh tall, so each feature gets plenty of scroll time)
+
+3. **Outro page** - Ending section✅ **Scroll Behavior**
+
 - Scroll through features without jumping to Section 3
-- Each scroll cycles to next feature (Feature 1→2→3→4→5)
-- Only after Feature 5, scrolling takes you to Section 3
-- Smooth, non-laggy behavior
 
-✅ **Interactive Features**
-- Click any feature in the list to select it
-- Blue indicator shows active feature
-- Navigation arrows (previous/next)
+The cool part: You stay on the feature section until you've seen all 5 features. No accidental jumps to the end.- Each scroll cycles to next feature (Feature 1→2→3→4→5)
+
+- Only after Feature 5, scrolling takes you to Section 3
+
+## Tech Stack- Smooth, non-laggy behavior
+
+
+
+- **Next.js 16** with React 19✅ **Interactive Features**
+
+- **TypeScript** for type safety- Click any feature in the list to select it
+
+- **Tailwind CSS** for styling- Blue indicator shows active feature
+
+- Native JavaScript for scroll handling (no GSAP)- Navigation arrows (previous/next)
+
 - Real-time updates in all three columns
 
+## How to Run
+
 ✅ **Responsive Design**
-- Mobile (375px): Single column layout
-- Tablet (768px): 3-column layout with proper scaling
-- Desktop (1920px+): Full 3-column layout
+
+```bash- Mobile (375px): Single column layout
+
+# Install dependencies- Tablet (768px): 3-column layout with proper scaling
+
+pnpm install- Desktop (1920px+): Full 3-column layout
+
 - iPhone mockup properly sized and never exceeds viewport
 
-✅ **Modern Stack**
-- React 19
+# Start dev server
+
+pnpm dev✅ **Modern Stack**
+
+```- React 19
+
 - Next.js 16
-- TypeScript
+
+Open http://localhost:3000 and scroll away!- TypeScript
+
 - Tailwind CSS
-- Framer Motion for animations
 
----
+## Features I Built- Framer Motion for animations
 
-## 🏗️ Project Structure
 
-```
-components/
-├── section-1.tsx          # Hero landing page with scroll indicator
+
+Each feature shows actual UI screens I created from scratch:---
+
+
+
+1. **Smart Booking** - Dashboard with upcoming appointments and stats## 🏗️ Project Structure
+
+2. **AI Suite** - Machine learning metrics and smart recommendations  
+
+3. **Insights** - Line graph showing performance trends```
+
+4. **Payments** - Transaction history with balance overviewcomponents/
+
+5. **Billing** - Professional GST invoice with tax breakdown├── section-1.tsx          # Hero landing page with scroll indicator
+
 ├── section-2.tsx          # Feature showcase wrapper
-├── section-3.tsx          # End section with CTA
+
+## Layout├── section-3.tsx          # End section with CTA
+
 ├── feature-showcase.tsx   # 3-column grid layout (main component)
-├── feature-content.tsx    # Left column: Title, description, arrows
-├── iphone-mockup.tsx      # Center column: iPhone device frame
-├── feature-list.tsx       # Right column: Feature selector
-├── app-screen.tsx         # Phone UI for each of 5 features
+
+Three columns on desktop:├── feature-content.tsx    # Left column: Title, description, arrows
+
+- **Left**: Feature descriptions with nav arrows (positioned at iPhone bottom)├── iphone-mockup.tsx      # Center column: iPhone device frame
+
+- **Center**: iPhone mockup with volume/power buttons├── feature-list.tsx       # Right column: Feature selector
+
+- **Right**: Feature list with blue indicator├── app-screen.tsx         # Phone UI for each of 5 features
+
 └── ui/                    # Pre-built UI components
 
+Everything stacks nicely on mobile.
+
 lib/
-├── features.ts            # Feature data and TypeScript interfaces
+
+## How Scroll Works├── features.ts            # Feature data and TypeScript interfaces
+
 └── utils.ts               # Utility functions
 
-app/
-├── page.tsx               # Main page with scroll logic and state management
-├── layout.tsx             # App layout wrapper
-├── globals.css            # Global styles
-```
+The middle section (Feature showcase) is 600vh tall. As you scroll through it:
 
----
+- 0-20%: Feature 1app/
 
-## 🎨 Design Features
+- 20-40%: Feature 2  ├── page.tsx               # Main page with scroll logic and state management
 
-### 1. Three-Column Layout
+- 40-60%: Feature 3├── layout.tsx             # App layout wrapper
 
-**Left Column (1/3)**
-- Feature number and title
+- 60-80%: Feature 4├── globals.css            # Global styles
+
+- 80-100%: Feature 5```
+
+
+
+After 100%, you finally reach Section 3. Simple math, smooth experience.---
+
+
+
+## What I Fixed Along the Way## 🎨 Design Features
+
+
+
+- Section was unpinning too early (had to rework progress calculation)### 1. Three-Column Layout
+
+- Navigation arrows were shifting with text (made them position:absolute)
+
+- Feature 5 was getting skipped (adjusted thresholds)**Left Column (1/3)**
+
+- Spent way too long debugging scroll behavior (but it works now!)- Feature number and title
+
 - Feature description points
-- Previous/Next navigation arrows
+
+## Live Demo- Previous/Next navigation arrows
+
 - Updates on feature selection
 
+Check it out: [Troibits-Task on GitHub](https://github.com/Anomasingh/Troibits-Task)
+
 **Center Column (1/3)**
-- iPhone 14-style mockup
+
+---- iPhone 14-style mockup
+
 - Perfectly scaled to fit all screen sizes
-- Shows mock UI of each feature
+
+Made for the Troibits internship assignment. Took longer than expected but learned a ton about scroll-driven interfaces!- Shows mock UI of each feature
+
 - Smooth fade transitions
 
 **Right Column (1/3)**
